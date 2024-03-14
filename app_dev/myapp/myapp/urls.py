@@ -34,6 +34,16 @@ def subtract_numbers(request, a: float = 15, b: float = 10 ):
     result = a - b
     return {'result': result}
 
+@api.get("/multiplication")
+def multiply_numbers(request, a: float = 50, b: float = 25 ):
+    result = a * b
+    return {'result': result}
+
+@api.get("/division")
+def divide_numbers(request, a: float = 90, b: float = 9 ):
+    result = a / b
+    return {'result': result}
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/",api.urls)
